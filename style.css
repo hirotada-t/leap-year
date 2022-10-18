@@ -1,0 +1,65 @@
+#app {
+  max-width: 900px;
+  margin: 50px auto 0;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+  gap: 20px;
+}
+
+.input {
+  background-color: rgb(200, 220, 220);
+  padding: 10px 30px;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 10px 60px;
+  margin: 30px 0;
+  background-color: rgb(40, 60, 220);
+  border: none;
+  box-shadow: 2px 8px 21px -2px #777;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+button:hover {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.result {
+  width: 100%;
+}
+
+.result-list {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid;
+  border-radius: 10px;
+  height: 50vh;
+  overflow-y: auto;
+  align-content: flex-start;
+}
+
+.align-center {
+  align-content: center;
+}
+
+.result-list p {
+  width: 100%;
+}
+
+.result-item {
+  margin: 20px 0;
+  width: 25%;
+}

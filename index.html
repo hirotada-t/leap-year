@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>LeapYear</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="app-container">
+      <div class="input">
+        <h2>うるう年をサーチ</h2>
+        <form action="">
+          <input type="number" id="from" v-model="from">年<br>
+          ～<input type="number" id="to" v-model="to">年
+          <p>までのうるう年を調べる</p>
+          <button type="button" @click="searchLeapYear">実　行</button>
+        </form>
+      </div>
+      <div class="result">
+        <h3>結果 ({{leapYearList.length}}件)</h3>
+        <div class="result-list align-center">
+          <p v-if="leapYearList.length === 0">0件ヒットしました</p>
+          <div class="result-item" v-else v-for="year in leapYearList">{{year}}年</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
